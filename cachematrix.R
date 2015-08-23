@@ -1,17 +1,22 @@
-## Put comments here that give an overall description of what your
-## functions do
+##This is an R script for Programming Assignment 2
+##The first function makes a list of 4 functions:
+##1. Sets a matrix - after new call nullifies it
+##2. Gets value of a matrix
+##3. Sets inverse matrix
+##4. Gets the inverse matrix
 
-## Write a short comment describing this function
+
+##
 
 makeCacheMatrix <- function(x = matrix()) {
-        m <- NULL
+        matrix <- NULL
         set <- function(y) {
                 x <<- y
-                m <<- NULL
+                matrix <<- NULL
         }
         get <- function() x
-        setinverse <- function(solve) m <<- solve
-        getinverse <- function() m
+        setinverse <- function(solve) matrix <<- solve
+        getinverse <- function() matrix
         list(set = set, get = get,
              setinverse = setinverse,
              getinverse = getinverse)
@@ -22,7 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## Write a short comment describing this function
+## This function is supposed firstly to search the 'x' argument for
+##inverse matrix. If it finds, then returns already cached inverse
+## matrix. Otherwise it calculates it and returns
 
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
@@ -30,8 +37,8 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(m)
         }
-        data <- x$get()
-        m <- solve(data, ...)
+        matrik <- x$get()
+        m <- solve(matrik, ...)
         x$setinverse(m)
         m
         
