@@ -1,4 +1,4 @@
-##This is an R script for Programming Assignment 2
+
 ##The first function makes a list of 4 functions:
 ##1. Sets a matrix - after new call nullifies it
 ##2. Gets value of a matrix
