@@ -1,9 +1,9 @@
 
 ##The first function makes a list of 4 functions:
-##1. Sets a matrix - after new call nullifies it
-##2. Gets value of a matrix
-##3. Sets inverse matrix
-##4. Gets the inverse matrix
+##1. set - sets a matrix
+##2. get - gets he value of a matrix
+##3. setinverse - sets an inverse matrix
+##4. get - gets value of inverse matrix
 
 
 ##
