@@ -1,12 +1,14 @@
 
-##The first function makes a list of 4 functions:
+##The first function takes a matrix as an input.
+##It makes a list of 4 functions:
 ##1. set - sets a matrix
-##2. get - gets he value of a matrix
+##2. get - gets the value of a matrix
 ##3. setinverse - sets an inverse matrix
 ##4. get - gets value of inverse matrix
-
-
 ##
+
+
+
 
 makeCacheMatrix <- function(x = matrix()) {
         matrix <- NULL
@@ -26,10 +28,14 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
+##The second function takes the result of the previous one
+##as an input
 
-## This function is supposed firstly to search the 'x' argument for
-##inverse matrix. If it finds, then returns already cached inverse
-## matrix. Otherwise it calculates it and returns
+## Then it searches the input - 'X' - for cached meaning for
+##the inverse matrix. If found, it returns it's value
+## and prints 'getting cached data'.
+##If not found, it calculates inverse matrix, returns it value
+##and saves in cache
 
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
